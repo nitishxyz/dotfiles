@@ -33,6 +33,7 @@ return {
 			html = { "prettierd", "prettier", stop_after_first = true },
 			css = { "prettierd", "prettier", stop_after_first = true },
 			scss = { "prettierd", "prettier", stop_after_first = true },
+			rust = { "rustfmt" },
 		},
 		-- Set default options
 		default_format_opts = {

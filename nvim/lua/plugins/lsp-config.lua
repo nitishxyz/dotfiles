@@ -19,6 +19,18 @@ return {
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({})
 			lspconfig.ts_ls.setup({})
+			-- lspconfig.rust_analyzer.setup({
+			-- 	-- Server-specific settings. See `:help lspconfig-setup`
+			-- 	settings = {
+			-- 		["rust-analyzer"] = {
+			--
+			-- 			diagnostic = {
+			--
+			-- 				refreshSupport = false,
+			-- 			},
+			-- 		},
+			-- 	},
+			-- })
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
