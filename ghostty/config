@@ -1,7 +1,15 @@
 theme = rose-pine
 
-font-size = 14
+font-size = 14.5
 font-family = "OperatorMonoLigNerdFont-Regular"
 
 window-width = 84
 window-height = 24
+
+
+
+# Resize the split upward by 10 units
+keybind = super+ctrl+k=resize_split:up,10
+
+# Resize the split downward by 10 units
+keybind = super+ctrl+j=resize_split:down,10
