@@ -1,8 +1,13 @@
 theme = rose-pine
 selection-background = #403d52
 
-font-size = 14.5
-font-family = "OperatorMonoLigNerdFont-Regular"
+font-size = 16.5
+# font-family = "Fira Code Retina"
+font-family = "Cascadia Code NF"
+font-feature = 'ss01'
+#font-family = "mononoki bold"
+# font-family = "CommitMono"
+#font-family = "JetBrains Mono SemiBold"
 
 window-width = 84
 window-height = 24

@@ -1,7 +1,7 @@
--- return {}
-return {
-	"github/copilot.vim",
-	config = function()
-		require("copilot").setup({})
-	end,
-}
+return {}
+-- return {
+--   "github/copilot.vim",
+--   config = function()
+--     require("copilot").setup({})
+--   end,
+-- }
