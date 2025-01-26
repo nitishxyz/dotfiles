@@ -2,13 +2,17 @@ theme = rose-pine
 selection-background = #403d52
 
 font-size = 15
-font-family = "Fira Code Retina"
+# font-family = "Fira Code Retina"
 # font-family = "Cascadia Code NF"
 # font-family = "TX-02-Trial"
 # font-feature = 'ss01', 'calt'
-#font-family = "mononoki bold"
+# font-family = "mononoki bold"
 # font-family = "CommitMono"
-#font-family = "JetBrains Mono SemiBold"
+# font-family = "JetBrains Mono SemiBold"
+font-family = "Berkeley Mono Variable"
+font-variation = "wght=500" 
+font-feature = "ss01", "calt"
+
 
 window-width = 84
 window-height = 24
