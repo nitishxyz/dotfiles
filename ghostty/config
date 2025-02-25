@@ -1,0 +1,26 @@
+theme = rose-pine
+selection-background = #403d52
+
+font-size = 15
+# font-family = "Fira Code Retina"
+# font-family = "Cascadia Code NF"
+# font-family = "TX-02-Trial"
+# font-feature = 'ss01', 'calt'
+# font-family = "mononoki bold"
+# font-family = "CommitMono"
+# font-family = "JetBrains Mono SemiBold"
+font-family = "Berkeley Mono Variable"
+font-variation = "wght=500" 
+font-feature = "ss01", "calt"
+
+
+window-width = 84
+window-height = 24
+
+
+
+# Resize the split upward by 10 units
+keybind = super+ctrl+k=resize_split:up,10
+
+# Resize the split downward by 10 units
+keybind = super+ctrl+j=resize_split:down,10
