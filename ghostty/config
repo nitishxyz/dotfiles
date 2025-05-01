@@ -11,11 +11,11 @@ font-size = 15
 # font-family = "JetBrains Mono SemiBold"
 font-family = "Berkeley Mono Variable"
 font-variation = "wght=500" 
-font-feature = "ss01", "calt"
+#font-feature = "ss01", "calt"
 
 
-window-width = 84
-window-height = 24
+window-width = 80
+window-height = 22
 
 
 
