@@ -9,7 +9,7 @@ vim.opt.autoindent = true
 -- Other useful options
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.wrap = false
+vim.opt.wrap = true
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undofile = true
