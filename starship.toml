@@ -21,7 +21,7 @@ $python\n \
 [󱞪](fg:iris) \
 """
 
-palette = "rose-pine"
+palette = "ayu-dark"
 
 [palettes.rose-pine]
 overlay = '#26233a'
@@ -41,6 +41,17 @@ rose = '#ea9a97'
 pine = '#3e8fb0'
 foam = '#9ccfd8'
 iris = '#c4a7e7'
+
+[palettes.ayu-dark]
+background = "#242936" # New Ayu editor.bg
+foreground = "#CCCAC2" # New Ayu editor.fg
+overlay    = "#1C212B" # New Ayu ui.panel.bg
+love       = "#FF6666" # New Ayu common.error (red)
+gold       = "#FFCC66" # New Ayu common.accent (yellow/gold)
+rose       = "#F28779" # New Ayu syntax.markup (pinkish-red)
+pine       = "#73D0FF" # New Ayu syntax.entity (blue)
+foam       = "#95E6CB" # New Ayu syntax.regexp (mint/cyan)
+iris       = "#DFBFFF" # New Ayu syntax.constant (purple)
 
 [directory]
 format = "[](fg:overlay)[ $path ]($style)[](fg:overlay) "

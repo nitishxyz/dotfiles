@@ -1,4 +1,7 @@
+vim.o.background = "dark"
+-- vim.cmd.colorscheme "ayu"
 local map = vim.api.nvim_set_keymap
+vim.opt.termguicolors = true
 
 local opts = { noremap = true, silent = true }
 

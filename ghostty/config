@@ -1,7 +1,7 @@
-theme = rose-pine
+theme = ayu
 selection-background = #403d52
 
-font-size = 15
+font-size = 16
 # font-family = "Fira Code Retina"
 # font-family = "Cascadia Code NF"
 # font-family = "TX-02-Trial"
