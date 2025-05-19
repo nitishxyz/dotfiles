@@ -52,4 +52,41 @@ return {
 			},
 		},
 	},
+	{
+		"mrcjkb/rustaceanvim",
+		version = "^6", -- use version ^6.x.x (latest)
+		ft = { "rust" },
+		config = function()
+			-- Nothing to configure here - rustaceanvim doesn't need setup()
+			-- The plugin will be initialized on Rust files
+		end,
+		init = function()
+			-- Set up rustaceanvim settings
+			vim.g.rustaceanvim = {
+				server = {
+					settings = {
+						["rust-analyzer"] = {
+							completion = {
+								postfix = {
+									enable = true,
+								},
+								callable = {
+									snippets = "fill_arguments",
+								},
+							},
+							cargo = {
+								allFeatures = true,
+								buildScripts = {
+									enable = true,
+								},
+							},
+							procMacro = {
+								enable = true,
+							},
+						},
+					},
+				},
+			}
+		end,
+	},
 }

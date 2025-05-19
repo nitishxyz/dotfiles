@@ -31,6 +31,9 @@ return {
       vim.keymap.set("n", "<leader>fr", fzf.oldfiles, { desc = "Recent files" })
       vim.keymap.set("n", "<leader>fw", fzf.grep_cword, { desc = "Find word under cursor" })
       vim.keymap.set("n", "<leader>fh", fzf.help_tags, { desc = "Help tags" })
+      vim.keymap.set("n", "<leader>fi", fzf.grep_curbuf, { desc = "Search in current file" })
+      vim.keymap.set("n", "<leader>gb", fzf.git_branches, { desc = "Git branches" })
+      
     end
   }
 } 

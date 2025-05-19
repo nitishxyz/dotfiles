@@ -10,7 +10,7 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				automatic_enable = false,
-				ensure_installed = { "lua_ls", "rust_analyzer", "ts_ls", "gopls" },
+				ensure_installed = { "lua_ls", "ts_ls", "gopls" },
 			})
 		end,
 	},
@@ -21,7 +21,6 @@ return {
 		opts = {
 			servers = {
 				lua_ls = {},
-				rust_analyzer = {},
 				ts_ls = {},
 				gopls = {},
 			},

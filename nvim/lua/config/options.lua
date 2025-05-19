@@ -32,3 +32,14 @@ map("n", "<c-j>", ":wincmd j<CR>", opts)
 map("n", "<c-h>", ":wincmd h<CR>", opts)
 map("n", "<c-l>", ":wincmd l<CR>", opts)
 
+-- Set clipboard to system clipboard. This allows the user to paste from their OS clipboard.
+vim.cmd("set clipboard=unnamedplus")
+
+-- Copy command from standard output to system clipboard. Use 'a-y' to copy all content of the buffer.
+map("n", "<A-y>", "+y", opts)
+map("n", "<A-Y>", "+Y", opts)
+map("n", "<A-yy>", "+yy", opts)
+
+-- Paste line/paragraph from system clipboard into standard output. Use '<leader>x' to paste into file.
+map("n", "<A-p>", "+p", opts)
+map("n", "<A-P>", "+P", opts)

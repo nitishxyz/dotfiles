@@ -4,7 +4,7 @@ return {
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
-			require("lualine").setup()
+			require("lualine").setup({})
 		end,
 	},
 	{
@@ -54,6 +54,18 @@ return {
 			scroll = { enabled = true },
 			statuscolumn = { enabled = true },
 			words = { enabled = true },
+		},
+	},
+	{
+		"utilyre/barbecue.nvim",
+		name = "barbecue",
+		version = "*",
+		dependencies = {
+			"SmiteshP/nvim-navic",
+			"nvim-tree/nvim-web-devicons", -- optional dependency
+		},
+		opts = {
+			-- configurations go here
 		},
 	},
 }
