@@ -73,6 +73,11 @@ return {
 								callable = {
 									snippets = "fill_arguments",
 								},
+								procMacro = {
+									ignored = {
+										["napi-derive"] = { "napi" },
+									},
+								},
 							},
 							cargo = {
 								allFeatures = true,

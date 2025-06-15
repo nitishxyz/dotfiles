@@ -1,5 +1,5 @@
 theme = ayu
-selection-background = #403d52
+# selection-background = #403d52
 
 font-size = 16
 # font-family = "Fira Code Retina"
@@ -11,7 +11,7 @@ font-size = 16
 # font-family = "JetBrains Mono SemiBold"
 font-family = "Berkeley Mono Variable"
 font-variation = "wght=500" 
-#font-feature = "ss01", "calt"
+font-feature = calt
 
 
 window-width = 80
@@ -24,3 +24,4 @@ keybind = super+ctrl+k=resize_split:up,10
 
 # Resize the split downward by 10 units
 keybind = super+ctrl+j=resize_split:down,10
+# keybind = shift+enter=text:\n
