@@ -9,7 +9,7 @@ font-size = 16
 # font-family = "mononoki bold"
 # font-family = "CommitMono"
 # font-family = "JetBrains Mono SemiBold"
-font-family = "Berkeley Mono Variable"
+font-family = "BerkeleyMono Nerd Font Mono"
 # font-variation = "wght=500" 
 font-feature = calt
 font-thicken = true
