@@ -11,3 +11,4 @@ yarn
 solana
 solar
 *.log
+!zed/settings.json
