@@ -10,8 +10,9 @@ font-size = 16
 # font-family = "CommitMono"
 # font-family = "JetBrains Mono SemiBold"
 font-family = "Berkeley Mono Variable"
-font-variation = "wght=500" 
+# font-variation = "wght=500" 
 font-feature = calt
+font-thicken = true
 
 
 window-width = 80
@@ -24,4 +25,4 @@ keybind = super+ctrl+k=resize_split:up,10
 
 # Resize the split downward by 10 units
 keybind = super+ctrl+j=resize_split:down,10
-# keybind = shift+enter=text:\n
+keybind = shift+enter=text:\n
