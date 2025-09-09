@@ -11,7 +11,7 @@
   //   "show": "auto"
   // },
   "inlay_hints": {
-    "enabled": true,
+    "enabled": false,
     "show_value_hints": true,
     "show_type_hints": true,
     "show_parameter_hints": true,

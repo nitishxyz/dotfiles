@@ -19,6 +19,11 @@ window-width = 80
 window-height = 22
 
 
+# Resize the split upward by 10 units
+keybind = super+ctrl+h=resize_split:left,10
+
+# Resize the split downward by 10 units
+keybind = super+ctrl+l=resize_split:right,10
 
 # Resize the split upward by 10 units
 keybind = super+ctrl+k=resize_split:up,10
@@ -26,3 +31,7 @@ keybind = super+ctrl+k=resize_split:up,10
 # Resize the split downward by 10 units
 keybind = super+ctrl+j=resize_split:down,10
 keybind = shift+enter=text:\n
+keybind = performable:ctrl+h=goto_split:left
+keybind = performable:ctrl+j=goto_split:bottom
+keybind = performable:ctrl+k=goto_split:top
+keybind = performable:ctrl+l=goto_split:right
