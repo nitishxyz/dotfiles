@@ -1,0 +1,27 @@
+{
+  "git": {
+    "tools": [
+      "fs_ls",
+      "fs_read",
+      "fs_tree",
+      "git_commit",
+      "git_diff",
+      "git_status",
+    ],
+    "prompt": ".agi/agents/git.txt"
+  },
+  "build": {
+    "appendTools": [
+      "ripgrep",
+      "git_status",
+      "git_diff"
+    ]
+  },
+  "plan": {
+    "appendTools": [
+      "ripgrep",
+      "git_diff",
+      "git_status"
+    ]
+  }
+}

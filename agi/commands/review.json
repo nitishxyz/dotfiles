@@ -1,0 +1,9 @@
+{
+  "name": "review",
+  "description": "This command generated a clean review for current staged changes",
+  "agent": "git",
+  "defaults": {
+    "agent": "git"
+  },
+  "promptPath": "review.md"
+}

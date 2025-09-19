@@ -1,0 +1,9 @@
+{
+  "name": "commit",
+  "description": "This command takes the staged chagnes and write a conventional commit message",
+  "agent": "git",
+  "defaults": {
+    "agent": "git"
+  },
+  "promptPath": "commit.md"
+}

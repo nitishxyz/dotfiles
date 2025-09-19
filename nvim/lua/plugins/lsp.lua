@@ -21,7 +21,39 @@ return {
 		opts = {
 			servers = {
 				lua_ls = {},
-				ts_ls = {},
+				ts_ls = {
+					settings = {
+						typescript = {
+							suggest = {
+								includeCompletionsWithInsertText = true,
+								includeCompletionsForImportStatements = true,
+								includeAutomaticOptionalChainCompletions = true,
+								importModuleSpecifierPreference = "relative",
+								importModuleSpecifierEnding = "minimal",
+							},
+							preferences = {
+								importModuleSpecifier = "relative",
+								includePackageJsonAutoImports = "on",
+							},
+						},
+						javascript = {
+							suggest = {
+								includeCompletionsWithInsertText = true,
+								includeCompletionsForImportStatements = true,
+								includeAutomaticOptionalChainCompletions = true,
+								importModuleSpecifierPreference = "relative",
+								importModuleSpecifierEnding = "minimal",
+							},
+							preferences = {
+								importModuleSpecifier = "relative",
+								includePackageJsonAutoImports = "on",
+							},
+						},
+						completions = {
+							completeFunctionCalls = true,
+						},
+					},
+				},
 				gopls = {},
 			},
 		},

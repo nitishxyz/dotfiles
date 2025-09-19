@@ -1,0 +1,21 @@
+{
+  "defaults": {
+    "agent": "build",
+    "provider": "openrouter",
+    "model": "moonshotai/kimi-k2"
+  },
+  "providers": {
+    "openai": {
+      "enabled": true
+    },
+    "anthropic": {
+      "enabled": false
+    },
+    "google": {
+      "enabled": false
+    },
+    "openrouter": {
+      "enabled": false
+    }
+  }
+}
