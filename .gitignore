@@ -12,3 +12,5 @@ solana
 solar
 *.log
 !zed/settings.json
+wireshark
+.agi
