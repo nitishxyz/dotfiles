@@ -1,20 +1,23 @@
 {
   "defaults": {
     "agent": "build",
-    "provider": "google",
-    "model": "gemini-2.5-pro"
+    "provider": "anthropic",
+    "model": "claude-sonnet-4-5-20250929"
   },
   "providers": {
     "openai": {
       "enabled": true
     },
     "anthropic": {
-      "enabled": false
+      "enabled": true
     },
     "google": {
       "enabled": false
     },
     "openrouter": {
+      "enabled": false
+    },
+    "opencode": {
       "enabled": false
     }
   }
