@@ -15,10 +15,10 @@
       "enabled": false
     },
     "openrouter": {
-      "enabled": false
+      "enabled": true
     },
     "opencode": {
-      "enabled": false
+      "enabled": true
     }
   }
 }
