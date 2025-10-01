@@ -21,10 +21,10 @@ return {
         },
         files = {
           prompt = 'Files❯ ',
-          cmd = "rg --files --hidden --glob '!.git'",
+          cmd = "{ git ls-files --modified --others --exclude-standard 2>/dev/null || true; rg --files --hidden --glob '!.git'; } | awk '!seen[$0]++'",
           file_icons = true,
           color_icons = true,
-          path_shorten = true,
+          path_shorten = false,
         },
         grep = {
           prompt = 'Grep❯ ',
