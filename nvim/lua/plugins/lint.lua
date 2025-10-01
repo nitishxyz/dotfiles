@@ -16,22 +16,17 @@ return {
         markdown = { 'vale' },
       }
       
-      -- Set up diagnostic signs
-      local signs = {
-        { name = "DiagnosticSignError", text = "✘" },
-        { name = "DiagnosticSignWarn", text = "▲" },
-        { name = "DiagnosticSignHint", text = "⚑" },
-        { name = "DiagnosticSignInfo", text = "ℹ" },
-      }
-      
-      for _, sign in ipairs(signs) do
-        vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
-      end
-      
       -- Configure diagnostics display
       vim.diagnostic.config({
         virtual_text = true,
-        signs = true,
+        signs = {
+          text = {
+            [vim.diagnostic.severity.ERROR] = "✘",
+            [vim.diagnostic.severity.WARN] = "▲",
+            [vim.diagnostic.severity.HINT] = "⚑",
+            [vim.diagnostic.severity.INFO] = "ℹ",
+          }
+        },
         underline = true,
         update_in_insert = false,
         severity_sort = true,

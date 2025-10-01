@@ -69,6 +69,9 @@ return {
                 vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
                 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
                 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+
+                vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
+                vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
             end
 
             for server, config in pairs(opts.servers) do
@@ -76,6 +79,11 @@ return {
                 config.on_attach = on_attach
                 vim.lsp.enable(server)
             end
+            
+            -- Global diagnostic keymaps
+            vim.keymap.set("n", "<leader>d", function() vim.diagnostic.open_float({ focusable = true }) end, { desc = "Show focusable diagnostics" })
+            vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
+            vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
         end,
     },
 }
