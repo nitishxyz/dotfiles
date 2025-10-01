@@ -21,7 +21,6 @@ vim.opt.updatetime = 50
 vim.opt.sidescrolloff = 8 -- Prevents horizontal scrolling until cursor is 8 chars from edge
 
 local map = vim.api.nvim_set_keymap
-vim.opt.termguicolors = true
 local opts = { noremap = true, silent = true }
 
 -- Navigate vim panes better
