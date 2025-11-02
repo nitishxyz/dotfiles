@@ -74,9 +74,12 @@ return {
                 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
             end
 
-            for server, config in pairs(opts.servers) do
-                config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
-                config.on_attach = on_attach
+            for server, server_opts in pairs(opts.servers) do
+                local config = vim.tbl_deep_extend("force", {}, server_opts, {
+                    capabilities = require("blink.cmp").get_lsp_capabilities(server_opts.capabilities),
+                    on_attach = on_attach,
+                })
+                vim.lsp.config(server, config)
                 vim.lsp.enable(server)
             end
             
