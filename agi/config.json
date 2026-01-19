@@ -2,7 +2,7 @@
   "defaults": {
     "agent": "build",
     "provider": "anthropic",
-    "model": "claude-sonnet-4-5-20250929"
+    "model": "claude-opus-4-5"
   },
   "providers": {
     "openai": {
@@ -19,6 +19,15 @@
     },
     "opencode": {
       "enabled": true
+    },
+    "solforge": {
+      "enabled": false
+    },
+    "zai": {
+      "enabled": false
+    },
+    "zai-coding": {
+      "enabled": false
     }
   }
 }

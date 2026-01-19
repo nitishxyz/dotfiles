@@ -10,7 +10,15 @@
 	// "minimap": {
 	//   "show": "auto"
 	// },
-	"inlay_hints": {
+	"session": {
+  "trust_all_worktrees": true
+ },
+ "telemetry": {
+  "diagnostics": true,
+  "metrics": false
+ },
+ "base_keymap": "VSCode",
+ "inlay_hints": {
 		"enabled": false,
 		"show_value_hints": true,
 		"show_type_hints": true,
