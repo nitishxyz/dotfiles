@@ -10,7 +10,18 @@
 	// "minimap": {
 	//   "show": "auto"
 	// },
-	"session": {
+	"edit_predictions": {
+  "provider": "zed"
+ },
+ "agent_servers": {
+	"Otto": {
+      "type": "custom",
+      "command": "otto",
+      "args": ["--acp"],
+      "env": {}
+    }
+ },
+ "session": {
   "trust_all_worktrees": true
  },
  "telemetry": {
@@ -35,12 +46,11 @@
 			"function": false
 		}
 	},
-	"features": {
-		"edit_prediction_provider": "zed"
-	},
 	"agent": {
-		"always_allow_tool_actions": true,
-		"default_profile": "write",
+		"tool_permissions": {
+   "default": "allow"
+  },
+  "default_profile": "write",
 		"default_model": {
 			"provider": "zed.dev",
 			"model": "claude-sonnet-4"

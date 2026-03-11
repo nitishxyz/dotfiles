@@ -17,7 +17,8 @@ return {
     typescriptreact = { "prettierd", "prettier", stop_after_first = true },
     tsx = { "prettierd", "prettier", stop_after_first = true },
 
-    go = { "go", lsp_format = "fallback" }
+    -- Use goimports + gofmt for Go (gofumpt is stricter alternative)
+    go = { "goimports", "gofmt" },
   },
 })
 end

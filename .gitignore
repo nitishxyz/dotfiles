@@ -6,12 +6,16 @@ btop
 iterm2
 nvim-old
 raycast
-zed
 yarn
+zed
 solana
 solar
 *.log
 !zed/settings.json
 wireshark
 .agi
+agi
 runtime
+otto
+.otto
+stackforge

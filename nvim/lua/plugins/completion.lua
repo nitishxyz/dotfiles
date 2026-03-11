@@ -97,8 +97,6 @@ return {
         -- Configure path source to show file paths
         providers = {
           path = {
-            name = 'path',
-            module = 'blink.cmp.sources.path',
             opts = {
               trailing_slash = true,
               label_trailing_slash = true,
@@ -106,16 +104,8 @@ return {
               show_hidden_files_by_default = false,
             }
           },
-          lsp = {
-            name = 'lsp',
-            module = 'blink.cmp.sources.lsp',
-            opts = {
-              -- Show function signatures
-              show_signatures = true,
-              -- Show completion item kind
-              show_kind = true,
-            }
-          }
+          -- LSP source uses default configuration (no custom opts needed)
+          -- The lsp, buffer, snippets sources are built-in and don't need module specification
         }
       },
   

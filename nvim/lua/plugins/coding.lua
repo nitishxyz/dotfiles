@@ -54,7 +54,7 @@ return {
 	},
 	{
 		"mrcjkb/rustaceanvim",
-		version = "^6", -- use version ^6.x.x (latest)
+		version = "^7", -- use version ^7.x.x (latest)
 		ft = { "rust" },
 		config = function()
 			-- Nothing to configure here - rustaceanvim doesn't need setup()
@@ -73,11 +73,6 @@ return {
 								callable = {
 									snippets = "fill_arguments",
 								},
-								procMacro = {
-									ignored = {
-										["napi-derive"] = { "napi" },
-									},
-								},
 							},
 							cargo = {
 								allFeatures = true,
@@ -87,6 +82,9 @@ return {
 							},
 							procMacro = {
 								enable = true,
+								ignored = {
+									["napi-derive"] = { "napi" },
+								},
 							},
 						},
 					},
