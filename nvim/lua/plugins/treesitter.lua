@@ -1,17 +1,54 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
+		lazy = false,
 		build = ":TSUpdate",
 		config = function()
 			require("nvim-treesitter").setup({
-				ensure_installed = { "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
-				sync_install = false,
-				auto_install = true,
-				ignore_install = { "javascript" },
+				install_dir = vim.fn.stdpath("data") .. "/site",
 			})
+
+			vim.treesitter.language.register("json", { "jsonc" })
+
+			require("nvim-treesitter").install({
+				"bash",
+				"go",
+				"javascript",
+				"json",
+				"lua",
+				"markdown",
+				"markdown_inline",
+				"query",
+				"rust",
+				"tsx",
+				"typescript",
+				"vim",
+				"vimdoc",
+				"yaml",
+			})
+
 			vim.api.nvim_create_autocmd("FileType", {
-				callback = function()
-					pcall(vim.treesitter.start)
+				pattern = {
+					"bash",
+					"go",
+					"javascript",
+					"json",
+					"jsonc",
+					"lua",
+					"markdown",
+					"query",
+					"rust",
+					"typescript",
+					"typescriptreact",
+					"tsx",
+					"vim",
+					"vimdoc",
+					"yaml",
+				},
+				callback = function(args)
+					if vim.bo[args.buf].buftype == "" then
+						pcall(vim.treesitter.start, args.buf)
+					end
 				end,
 			})
 		end,

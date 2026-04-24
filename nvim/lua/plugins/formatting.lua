@@ -1,26 +1,36 @@
 return {
-{
-  'stevearc/conform.nvim',
-  opts = {
-  },
-  config = function()
-	  require("conform").setup({
-  formatters_by_ft = {
-    lua = { "stylua" },
-    -- Conform will run multiple formatters sequentially
-    python = { "isort", "black" },
-    -- You can customize some of the format options for the filetype (:help conform.format)
-    rust = { "rustfmt", lsp_format = "fallback" },
-    -- Conform will run the first available formatter
-    javascript = { "prettierd", "prettier", stop_after_first = true },
-    typescript = { "prettierd", "prettier", stop_after_first = true },
-    typescriptreact = { "prettierd", "prettier", stop_after_first = true },
-    tsx = { "prettierd", "prettier", stop_after_first = true },
+  {
+    "stevearc/conform.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    opts = {
+      notify_on_error = false,
+      notify_no_formatters = false,
+      format_on_save = function(bufnr)
+        if vim.bo[bufnr].buftype ~= "" then
+          return
+        end
 
-    -- Use goimports + gofmt for Go (gofumpt is stricter alternative)
-    go = { "goimports", "gofmt" },
+        return {
+          timeout_ms = 1000,
+          lsp_format = "fallback",
+          quiet = true,
+        }
+      end,
+      formatters_by_ft = {
+        go = { "goimports", "gofmt" },
+        javascript = { "prettierd", "prettier" },
+        javascriptreact = { "prettierd", "prettier" },
+        json = { "prettierd", "prettier" },
+        jsonc = { "prettierd", "prettier" },
+        lua = { "stylua" },
+        markdown = { "prettierd", "prettier" },
+        python = { "isort", "black" },
+        rust = { "rustfmt" },
+        sh = { "shfmt" },
+        typescript = { "prettierd", "prettier" },
+        typescriptreact = { "prettierd", "prettier" },
+        yaml = { "prettierd", "prettier" },
+      },
+    },
   },
-})
-end
-}
 }
