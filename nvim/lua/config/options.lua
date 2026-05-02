@@ -19,6 +19,7 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
 vim.opt.sidescrolloff = 8 -- Prevents horizontal scrolling until cursor is 8 chars from edge
+vim.opt.autoread = true -- Automatically reload unchanged files modified outside Neovim
 
 -- Set clipboard to system clipboard. This allows the user to paste from their OS clipboard.
 vim.cmd("set clipboard=unnamedplus")

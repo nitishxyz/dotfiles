@@ -1,7 +1,15 @@
 return {
     'saghen/blink.cmp',
     -- optional: provides snippets for the snippet source
-    dependencies = { 'rafamadriz/friendly-snippets' },
+    dependencies = {
+      'rafamadriz/friendly-snippets',
+      {
+        'saghen/blink.compat',
+        version = '*',
+        lazy = true,
+        opts = {},
+      },
+    },
   
     -- use a release tag to download pre-built binaries
     version = '1.*',
@@ -93,9 +101,29 @@ return {
       -- Default list of enabled providers defined so that you can extend it
       -- elsewhere in your config, without redefining it, due to `opts_extend`
       sources = {
-        default = { 'lsp', 'path', 'snippets', 'buffer' },
+        default = { 'lsp', 'path', 'snippets', 'buffer', 'avante_commands', 'avante_mentions', 'avante_shortcuts', 'avante_files' },
         -- Configure path source to show file paths
         providers = {
+          avante_commands = {
+            name = 'avante_commands',
+            module = 'blink.compat.source',
+            score_offset = 90,
+          },
+          avante_files = {
+            name = 'avante_files',
+            module = 'blink.compat.source',
+            score_offset = 100,
+          },
+          avante_mentions = {
+            name = 'avante_mentions',
+            module = 'blink.compat.source',
+            score_offset = 1000,
+          },
+          avante_shortcuts = {
+            name = 'avante_shortcuts',
+            module = 'blink.compat.source',
+            score_offset = 1000,
+          },
           path = {
             opts = {
               trailing_slash = true,
