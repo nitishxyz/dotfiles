@@ -208,6 +208,10 @@ persistent-workspaces = ['1', '2', '3', '4', '5', '6']
     alt-shift-z = 'move-node-to-workspace Z'
     alt-shift-f = 'fullscreen'
 
+    # Cycle through non-empty workspaces
+    alt-backtick = 'exec-and-forget aerospace list-windows --all --format "%{workspace}" | sort -u | aerospace workspace --wrap-around --stdin next'
+    alt-shift-backtick = 'exec-and-forget aerospace list-windows --all --format "%{workspace}" | sort -u | aerospace workspace --wrap-around --stdin prev'
+
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-tab = 'workspace-back-and-forth'
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
