@@ -2,7 +2,13 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		lazy = false,
-		build = ":TSUpdate",
+		build = function()
+			local has_install_tools = vim.fn.executable("tree-sitter") == 1
+				and (vim.fn.executable("cc") == 1 or vim.fn.executable("gcc") == 1 or vim.fn.executable("clang") == 1)
+			if has_install_tools then
+				pcall(vim.cmd, "TSUpdate")
+			end
+		end,
 		config = function()
 			require("nvim-treesitter").setup({
 				install_dir = vim.fn.stdpath("data") .. "/site",
@@ -10,22 +16,26 @@ return {
 
 			vim.treesitter.language.register("json", { "jsonc" })
 
-			require("nvim-treesitter").install({
-				"bash",
-				"go",
-				"javascript",
-				"json",
-				"lua",
-				"markdown",
-				"markdown_inline",
-				"query",
-				"rust",
-				"tsx",
-				"typescript",
-				"vim",
-				"vimdoc",
-				"yaml",
-			})
+			local has_install_tools = vim.fn.executable("tree-sitter") == 1
+				and (vim.fn.executable("cc") == 1 or vim.fn.executable("gcc") == 1 or vim.fn.executable("clang") == 1)
+			if has_install_tools then
+				require("nvim-treesitter").install({
+					"bash",
+					"go",
+					"javascript",
+					"json",
+					"lua",
+					"markdown",
+					"markdown_inline",
+					"query",
+					"rust",
+					"tsx",
+					"typescript",
+					"vim",
+					"vimdoc",
+					"yaml",
+				})
+			end
 
 			vim.api.nvim_create_autocmd("FileType", {
 				pattern = {

@@ -212,6 +212,10 @@ persistent-workspaces = ['1', '2', '3', '4', '5', '6']
     alt-backtick = 'exec-and-forget aerospace list-windows --all --format "%{workspace}" | sort -u | aerospace workspace --wrap-around --stdin next'
     alt-shift-backtick = 'exec-and-forget aerospace list-windows --all --format "%{workspace}" | sort -u | aerospace workspace --wrap-around --stdin prev'
 
+    # Cycle through windows of the focused app, across all workspaces
+    alt-quote = 'exec-and-forget ~/.config/aerospace/bin/cycle-app-windows next'
+    alt-shift-quote = 'exec-and-forget ~/.config/aerospace/bin/cycle-app-windows prev'
+
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-tab = 'workspace-back-and-forth'
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor

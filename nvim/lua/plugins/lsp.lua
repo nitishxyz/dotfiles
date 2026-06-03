@@ -8,9 +8,21 @@ return {
     {
         "mason-org/mason-lspconfig.nvim",
         config = function()
+            local function executable(cmd)
+                return vim.fn.executable(cmd) == 1
+            end
+
+            local ensure_installed = { "lua_ls" }
+            if executable("node") and executable("npm") then
+                vim.list_extend(ensure_installed, { "ts_ls", "jsonls" })
+            end
+            if executable("go") then
+                table.insert(ensure_installed, "gopls")
+            end
+
             require("mason-lspconfig").setup({
                 automatic_enable = false,
-                ensure_installed = { "lua_ls", "ts_ls", "gopls", "jsonls" },
+                ensure_installed = ensure_installed,
             })
         end,
     },
@@ -20,9 +32,14 @@ return {
 
         opts = {
             servers = {
-                jsonls = {},
-                lua_ls = {},
+                jsonls = {
+                    cmd = { "vscode-json-language-server", "--stdio" },
+                },
+                lua_ls = {
+                    cmd = { "lua-language-server" },
+                },
                 ts_ls = {
+                    cmd = { "typescript-language-server", "--stdio" },
                     settings = {
                         typescript = {
                             suggest = {
@@ -55,7 +72,9 @@ return {
                         },
                     },
                 },
-                gopls = {},
+                gopls = {
+                    cmd = { "gopls" },
+                },
             },
         },
         config = function(_, opts)
@@ -81,7 +100,9 @@ return {
                     on_attach = on_attach,
                 })
                 vim.lsp.config(server, config)
-                vim.lsp.enable(server)
+                if not config.cmd or vim.fn.executable(config.cmd[1]) == 1 then
+                    vim.lsp.enable(server)
+                end
             end
             
             -- Global diagnostic keymaps
