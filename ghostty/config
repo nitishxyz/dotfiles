@@ -14,6 +14,9 @@ font-family = "BerkeleyMono Nerd Font Mono"
 font-feature = calt
 font-thicken = true
 
+# Use Ghostty's ssh wrapper so remote terminfo/env are installed automatically.
+shell-integration-features = ssh-env,ssh-terminfo
+
 
 window-width = 80
 window-height = 22
